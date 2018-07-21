@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  flask:
+    build: app
+    image: email-nlp-application/flask:v0
+    volumes:
+      - ./app:/app
+      - ./nlp:/nlp
+    ports:
+      - ${PORT_FORWARDING}
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+      - OAUTHLIB_INSECURE_TRANSPORT=${OAUTHLIB_INSECURE_TRANSPORT}
+      - DEBUG=${DEBUG}
+      - WTF_CSRF_ENABLED=${WTF_CSRF_ENABLED}
+      - UWSGI_INI=${UWSGI_INI}

@@ -1,0 +1,5 @@
+pattern,regex
+branch change,branch\s?\-?\s?change
+branch switch,branch\s?\-?\s?switch
+new branch,new branch
+from branch x to y,from branch [\w\-]* to

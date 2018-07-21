@@ -1,0 +1,32 @@
+<!doctype html>
+<meta HTTP-EQUIV="Pragma" content="no-cache">
+<meta HTTP-EQUIV="Expires" content="-1" >
+<head>
+  <title>NLP Application</title>
+  <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='local_hospital.png')}}"/>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Gugi|Roboto:900,500,300" rel="stylesheet">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    {% block body %}
+    {% endblock body %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script language="javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var options = {accordion:true}
+    var instances = M.Collapsible.init(elems, options);
+  });
+    </script>
+
+</body>

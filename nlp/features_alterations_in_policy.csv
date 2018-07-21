@@ -1,0 +1,5 @@
+pattern,regex
+change of,change of
+from x to y,from [\w\-]+ to [\w\-]+
+change from,change from
+change to,change to

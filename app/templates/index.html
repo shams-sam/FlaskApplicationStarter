@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% include "navbar.html" %}
+
+<div class="container">
+  <div class="row" style="margin-top:50px;">
+<form action="" method="post" class="teal darken-3">
+  <div class="col s12 m7 card-panel" style="padding:20px;">
+    <div class="row">
+      {{form.hidden_tag()}}
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="textarea1"name="text" class="materialize-textarea" required>{{data.text}}</textarea>
+        <label for="textarea1">Email Content</label>
+      </div>
+    </div>
+    {% for error in form.text.errors %}
+    <div [{{error}}]</div>
+    {% endfor %}
+    <div class="row">
+      <div class="input-field col s12" style="text-align: center;">
+        <input type="submit" class="btn teal darken-4 text-white" value="Analyse">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4" style="margin-left:20px;">
+    <ul class="collapsible">
+      {% for key, result in data.result.iteritems() %}
+      <li>
+        <div class="collapsible-header"><i class="material-icons">done_outline</i>{{result.complaint}}</div>
+        <div class="collapsible-body">
+          <ul>
+            <li><strong>Category:</strong><br>{{result.category}}</li>
+            <li><strong>Interaction:</strong><br>{{result.interaction}}</li>
+            <li><strong>Sub Classification:</strong><br>{{result.sub_classification}}</li>
+            <li><strong>Rule:</strong><br>{{result.rule}}</li>
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</form>
+  </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,5 @@
+pattern,regex
+policy doc,policy doc(ument)*
+pd,pd
+policy bond,policy\s?\-?\s?bond
+policy not received,policy not received

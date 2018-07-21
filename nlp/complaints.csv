@@ -1,0 +1,21 @@
+policy_related_complaint,interaction_type,category,sub_classification
+Non-receipt of policy-bond,Complaint,New Business,Policy Doc Disbursement
+Non-revival of lapsed policies,Request,Renewal,Policy Revival
+Transfer of policy from one branch to another,Complaint,New Business,Branch Change
+Non-refund of proposal deposit,Grievance,New Business,NA
+Wrong plan and term,Request,POS,Freelook Cancellation
+Adjustment of premium,Grievance,NA,NA
+Cancellation of policy,Complaint,NA,NA
+Issue of duplicate policy,Request,New Business,Policy Doc Disbursement
+Alterations in policy,Request,POS,Alterations
+Changes in policy,Request,NA,NA
+Nomination/Assignment of policies,Request,NA,NA
+Claim related,Complaint,NA,NA
+Non-payment of surrender value,Complaint,NA,NA
+Correct surrender value not paid,Complaint,NA,NA
+Non-settlement of maturity payment,Complaint,NA,NA
+Non-payment of claim,Grievance,NA,NA
+Non-payment of annuities,Grievance,NA,NA
+Repudiation of claim,Grievance,NA,NA
+Agent related,Complaint,NA,NA
+Others,NA,NA,NA

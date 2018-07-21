@@ -1,0 +1,4 @@
+pattern,regex
+duplicate pd,duplicate pd
+duplicate policy,duplicate\s?\-?\s?policy
+copy of policy,copy of policy

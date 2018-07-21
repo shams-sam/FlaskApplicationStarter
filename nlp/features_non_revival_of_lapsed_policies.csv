@@ -1,0 +1,6 @@
+pattern,regex
+revival,revival
+lapsed,lapsed
+non-revival,non\s?\-?\s?revival
+due date,due\s?\-?\s?date
+post due date,post due\s?\-?\s?date
