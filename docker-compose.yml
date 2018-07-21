@@ -2,7 +2,7 @@ version: "3.4"
 services:
   flask:
     build: app
-    image: email-nlp-application/flask:v0
+    image: nlp-application/flask:v0
     volumes:
       - ./app:/app
       - ./nlp:/nlp
