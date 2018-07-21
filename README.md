@@ -35,3 +35,6 @@ docker-compose ps
 # probing inside the container
 docker exec -it <container-name> bash
 ```
+
+### Screenshot
+![screenshot of application](screenshot.png)
