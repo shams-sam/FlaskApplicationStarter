@@ -15,6 +15,10 @@ docker-compose build
 docker-compose up -d
 ```
 
+### Test Flask
+- http://localhost/flask_status should return 200 OK
+- base url at http://localhost/nlp
+
 ### Stop
 ```bash
 docker-compose down
