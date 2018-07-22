@@ -9,8 +9,10 @@ from forms import Form
 from config import Config
 
 from feature_extractor import FeatureExtractor
+from test_emails import TestEmails
 
 extractor = FeatureExtractor()
+emails = TestEmails().get_all()
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -25,13 +27,13 @@ def index():
     data = {
         'text': '',
         'result': {},
+        'emails': emails,
     }
 
     if form.validate_on_submit():
         text = request.form['text']
         text = re.sub('\s+', ' ', text)
         data['text'] = text
-        print(extractor.rules)
         data['result'] = extractor.label(text)
 
     return render_template('index.html', form=form, data=data, page="index")

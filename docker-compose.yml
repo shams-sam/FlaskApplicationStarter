@@ -6,6 +6,7 @@ services:
     volumes:
       - ./app:/app
       - ./nlp:/nlp
+      - ./data:/data
     ports:
       - ${PORT_FORWARDING}
     environment:

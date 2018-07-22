@@ -21,11 +21,28 @@
     {% block body %}
     {% endblock body %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"></script>
     <script language="javascript">
+
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     var options = {accordion:true}
     var instances = M.Collapsible.init(elems, options);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
+
+  $('select').on('change', function() {
+    var text = $('.email-select option:selected').val();
+    $('textarea').val(text);
+    M.updateTextFields();
+    M.textareaAutoResize($('textarea'));
   });
     </script>
 

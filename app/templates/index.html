@@ -13,6 +13,16 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
+        <select class='email-select'>
+          <option value="" disabled selected>Choose from defaults</option>
+          {% for title, email in data.emails.iteritems() %}
+            <option value="{{email}}">{{title}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
         <textarea id="textarea1"name="text" class="materialize-textarea" required>{{data.text}}</textarea>
         <label for="textarea1">Email Content</label>
       </div>
