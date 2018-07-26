@@ -64,14 +64,23 @@ git clone https://github.com/shams-sam/FlaskApplicationStarter.git
 
 ### Build
 ```bash
+cd FlaskApplicationStarter
 cp .env.sample .env
 docker-compose build
 ```
 
-### Run
+### Run in detached mode
 ```bash
 docker-compose up -d
 ```
+
+### Run in Tmux
+```bash
+tmux new -s app
+docker-compose up
+ctrl-b d
+```
+
 
 ### Test Flask
 - http://localhost/flask_status should return 200 OK
